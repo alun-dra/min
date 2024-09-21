@@ -11,8 +11,7 @@ services:
       VERSION: "1.18.2"
       TYPE: "FORGE"
       FORGE_VERSION: "40.2.0"
-      nogui: "true"  # Añade esta línea
+      nogui: "true"
     volumes:
-    
-      - "./mods:/mods"
+      - "./mods:/mods"  # Solo si tienes mods
     restart: unless-stopped
