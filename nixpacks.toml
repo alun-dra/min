@@ -1,0 +1,10 @@
+[phases.build]
+commands = []
+
+[phases.start]
+commands = [
+  "java -Xmx1024M -Xms1024M -jar forge-1.18.2-40.2.0.jar nogui"
+]
+
+[environment]
+EULA = "TRUE"
