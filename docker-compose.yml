@@ -12,8 +12,6 @@ services:
     # Environment Variables
     environment:
       EULA: "TRUE"
-    volumes:
-      # attach the relative directory 'data' to the container's /data path
-      - F:\mcdata:/data
+    
     # restart policy - attempt to restart 3 times if the container fails
     restart: on-failure:3
