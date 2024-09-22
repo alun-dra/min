@@ -28,7 +28,8 @@ ARG GITHUB_BASEURL=https://github.com
 
 ARG EASY_ADD_VERSION=0.8.8
 ADD ${GITHUB_BASEURL}/itzg/easy-add/releases/download/${EASY_ADD_VERSION}/easy-add_${TARGETOS}_${TARGETARCH}${TARGETVARIANT} /usr/bin/easy-add
-RUN chmod +x /usr/bin/easy-add
+RUN chmod +x /build/run.sh && /build/run.sh install-packages
+
 
 ARG RESTIFY_VERSION=1.7.5
 RUN easy-add --var os=${TARGETOS} --var arch=${TARGETARCH}${TARGETVARIANT} \
