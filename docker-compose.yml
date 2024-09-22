@@ -2,30 +2,18 @@ version: "3.8"
 
 services:
   minecraft:
+    # Container Image on dockerhub 
     image: itzg/minecraft-server
     tty: true
     stdin_open: true
+    # Port Mappings
     ports:
       - "25565:25565"
+    # Environment Variables
     environment:
-      # The type of server to use chosen from: https://docker-minecraft-server.readthedocs.io/en/latest/types-and-platforms/
-      TYPE: "AUTO_CURSEFORGE"
-      # The Curse Forge Developer Console API key to use type AUTO_CURSEFORGE. Escape $ symbols with an additional $
-      CF_API_KEY: ""
-      # The Curse Forge URL of the modpack to use. Add the verion URL of the specific version at the end to pin the modpack version
-      CF_PAGE_URL: "https://www.curseforge.com/minecraft/modpacks/all-the-mods-8/files/4633481"
-      # The project ID of mods to exclude.
-      CF_EXCLUDE_MODS: "486778"
-      # Java memory heap size
-      MEMORY: "4G"
-      # Set this to allow Minecraft to access more RAM for world generation
-      # if you keep getting stuck at "Preparing spawn area"
-      MAX_MEMORY: "8G"
-      # The Version Minecraft Server to run
-      VERSION: "1.18.2"
-      # Accept the End User License Agreement
       EULA: "TRUE"
     volumes:
       # attach the relative directory 'data' to the container's /data path
       - F:\mcdata:/data
+    # restart policy - attempt to restart 3 times if the container fails
     restart: on-failure:3
