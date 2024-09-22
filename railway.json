@@ -1,6 +1,6 @@
 {
     "build": {
-      "dockerfilePath": "docker-compose"
+      "dockerfilePath": "docker-compose.yml"
     }
   }
   
