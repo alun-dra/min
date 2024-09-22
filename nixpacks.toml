@@ -5,7 +5,7 @@ nixPkgs = ["openjdk"]
 commands = []
 
 [start]
-cmd = "java -Djava.awt.headless=true -Xmx1024M -Xms1024M -jar forge-1.18.2-40.2.0.jar nogui"
+cmd = "java -Djava.awt.headless=true -Xmx1024M -Xms1024M -jar forge-server.jar nogui"
 
 [environment]
 EULA = "TRUE"
